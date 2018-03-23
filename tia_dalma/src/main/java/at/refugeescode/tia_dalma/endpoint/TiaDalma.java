@@ -1,4 +1,4 @@
-package at.refugeescode.mp7_pirates_of_the_code_bean.endpoint;
+package at.refugeescode.tia_dalma.endpoint;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

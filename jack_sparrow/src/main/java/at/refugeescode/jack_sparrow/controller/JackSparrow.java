@@ -1,18 +1,14 @@
 package at.refugeescode.jack_sparrow.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
-@Component
 public class JackSparrow {
 
-    @Autowired
-    private RestTemplate restTemplate;
     private String treasure;
 
     public String getTreasure() {
+        RestTemplate restTemplate = new RestTemplate();
         String clue = getClueAboutTheDutchman(restTemplate);
         String result = followClueToTheDutchman(clue, restTemplate);
         this.setTreasure(result);
